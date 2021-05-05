@@ -1,0 +1,20 @@
+
+<html> 
+    <head>
+        <title>Simple form</title> 
+    </head>
+    <body>
+        <div class='form'><!-- specify a class  -->
+            <form method='POST' action=''> <!-- specify method that is going to be created when form is entered/created   -->
+                {{ form.hidden_tag() }} <!-- crf  -->
+                {{ form.first_name.label }} {{ form.first_name }} <!-- reference the first form in the basicform objectin app.py  -->
+ <!-- .label >> is '(First name') in app.py   first_name = StringField('First Name')  -->
+                <br>
+                {{ form.last_name.label }} {{ form.last_name }}
+                <br> <!-- next line    -->
+                {{ form.submit }} <!-- put the subbit botton   -->
+            {{ message }}<!-- error message put after submit botton   -->
+            </form>
+        </div>
+    </body>
+</html>
